@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Deploying to surge
     steps:
       - uses: actions/checkout@v2
       - name: Install Node.js
@@ -23,4 +22,4 @@ jobs:
       - name: Install Surge
         run: npm install -g surge
       - name: Run surge
-        run: surge ./build bootcamp_react_am.surge.sh --token ${{ secrets.SURGE_TOKEN_REACT }}
+        run: surge ./build bootcamp_react_am.surge.sh --token ${{secrets.SURGE_TOKEN_REACT}}
